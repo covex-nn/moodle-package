@@ -1,0 +1,35 @@
+{
+  "name" : "covex-nn/moodle-package", 
+  "type" : "moodle-package", 
+  "description" : "Empty moodle package",
+  "license": "GPL-3.0+",
+  "require": {
+    "covex-nn/moodle-installer": "1.1.*", 
+    "moodle/moodle" : "2.4.3"
+  },
+  "repositories" : [
+    {
+      "type" : "composer", 
+      "url" : "http://downloads.demo-itao.com/moodle"
+    }
+  ], 
+  "extra" : {
+    "moodle-modules" : {
+
+    }
+  }, 
+  "config" : {
+    "bin-dir" : "bin", 
+    "moodle-dir" : "www"
+  }, 
+  "scripts" : {
+    "post-install-cmd" : [
+      "JooS\\Composer\\Event\\Developer::createSymlinks"
+    ], 
+    "post-update-cmd" : [
+      "JooS\\Composer\\Event\\Developer::createSymlinks"
+    ]
+  }, 
+  "minimum-stability" : "stable", 
+  "prefer-stable" : true
+}

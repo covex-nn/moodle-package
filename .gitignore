@@ -1,0 +1,8 @@
+/bin
+/build/build.local.properties
+/build/ci
+/composer.lock
+/nbproject
+/target
+/vendor
+/www
