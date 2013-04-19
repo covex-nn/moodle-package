@@ -10,7 +10,7 @@
   "repositories" : [
     {
       "type" : "composer", 
-      "url" : "http://downloads.demo-itao.com/moodle"
+      "url" : "https://raw.github.com/covex-nn/moodle-installer/master"
     }
   ], 
   "extra" : {
