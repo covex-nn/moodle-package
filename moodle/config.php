@@ -1,6 +1,7 @@
 <?php
 
 $configLoaded = false;
+
 /**
  * developing a package and symlink from vendor-dir to www
  *
