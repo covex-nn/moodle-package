@@ -4,7 +4,7 @@
   
   <property name="CI.bin" value="${HOME_DIR}/bin" />
   <property name="CI.dir" value="${CI.basedir}/ci" />
-  <property name="CI.source" value="${HOME_DIR}/moodle" />
+  <property name="CI.source" value="${HOME_DIR}/src" />
   <property name="CI.tests" value="${HOME_DIR}/tests" />
   
   <macrodef name="ci-tool">

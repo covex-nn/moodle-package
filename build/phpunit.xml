@@ -14,7 +14,7 @@
 
   <filter>
     <whitelist addUncoveredFilesFromWhitelist="true">
-      <directory>../moodle</directory>
+      <directory>../src</directory>
     </whitelist>
     <blacklist>
       <directory>../tests</directory>
