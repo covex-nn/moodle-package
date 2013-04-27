@@ -4,14 +4,15 @@
   "description" : "Empty moodle package",
   "license": "GPL-3.0+",
   "require": {
-    "covex-nn/moodle-installer": "1.1.*", 
+    "covex-nn/moodle-installer": ">=1.1.3", 
     "moodle/moodle" : "2.4.3"
-  },
+  }, 
+  "require-dev" : {
+    "covex-nn/phpqatools" : ">=1.0.0"
+  }, 
   "repositories" : [
-    {
-      "type" : "composer", 
-      "url" : "https://raw.github.com/covex-nn/moodle-installer/master"
-    }
+    { "type" : "composer", "url" : "https://raw.github.com/covex-nn/moodle-installer/master" }, 
+    { "type" : "composer", "url" : "https://raw.github.com/covex-nn/phpqatools/master" }
   ], 
   "extra" : {
     "moodle-modules" : {
@@ -33,6 +34,6 @@
       "JooS\\Composer\\Event\\Developer::createSymlinks"
     ]
   }, 
-  "minimum-stability" : "stable", 
+  "minimum-stability" : "dev", 
   "prefer-stable" : true
 }
