@@ -4,7 +4,7 @@
   "description" : "Empty moodle package",
   "license": "GPL-3.0+",
   "require": {
-    "covex-nn/moodle-installer": ">=1.1.3", 
+    "covex-nn/moodle-installer": ">=1.0", 
     "moodle/moodle" : "2.4.3"
   }, 
   "require-dev" : {
@@ -24,7 +24,8 @@
   }, 
   "config" : {
     "bin-dir" : "bin", 
-    "moodle-dir" : "www"
+    "moodle-dir" : "www", 
+    "preferred-install" : "dist"
   }, 
   "scripts" : {
     "post-install-cmd" : [
