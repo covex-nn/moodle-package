@@ -4,7 +4,8 @@ php:
    - 5.3
 
 before_script:
-   - ant init
+   - wget http://getcomposer.org/composer.phar
+   - ant -Dsystem.composer=composer.phar init
 
 script:
    - phpunit --coverage-text 
