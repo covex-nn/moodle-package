@@ -1,5 +1,6 @@
 bin
 build
+build.local.properties
 composer.lock
 moodledata
 nbproject
