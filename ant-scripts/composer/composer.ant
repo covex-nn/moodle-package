@@ -25,6 +25,7 @@
     <composer command="update">
       <args>
         <arg value="${composer.dev}" />
+        <arg value="--no-interactive" />
       </args>
     </composer>
   </target>
