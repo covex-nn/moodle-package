@@ -5,7 +5,7 @@ php:
 
 before_script:
    - wget http://getcomposer.org/composer.phar
-   - ant -Dsystem.composer=composer.phar init
+   - ant -Dsystem.composer=composer.phar -Dcomposer.dev=--dev init
 
 script:
    - ant -f build-dev.xml moodle-automation-init CI-build
