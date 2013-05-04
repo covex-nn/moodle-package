@@ -4,14 +4,14 @@
   "description" : "Empty moodle package",
   "license": "GPL-3.0+",
   "require": {
-    "covex-nn/moodle-installer": ">=1.0", 
-    "moodle/moodle" : "2.4.3"
+    "covex-nn/moodle-version": "~2.4"
   }, 
   "require-dev" : {
-    "covex-nn/phpqatools" : ">=1.0.0"
+    "covex-nn/phpqatools" : "~1.0", 
+    "covex-nn/moodle-automation" : "~1.0"
   }, 
   "repositories" : [
-    { "type" : "composer", "url" : "https://raw.github.com/covex-nn/moodle-installer/master" }, 
+    { "type" : "composer", "url" : "https://raw.github.com/covex-nn/moodle-version/master" }, 
     { "type" : "composer", "url" : "https://raw.github.com/covex-nn/phpqatools/master" }
   ], 
   "extra" : {

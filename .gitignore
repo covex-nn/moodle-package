@@ -4,6 +4,7 @@ build.local.properties
 composer.lock
 moodledata
 nbproject
+phpu_moodledata
 target
 vendor
 www

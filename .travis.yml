@@ -8,7 +8,7 @@ before_script:
    - ant -Dsystem.composer=composer.phar init
 
 script:
-   - phpunit --coverage-text 
+   - ant -f build-dev.xml moodle-automation-init CI-build
 
 notifications:
    email:

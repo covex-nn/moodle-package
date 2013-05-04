@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Moodle2_Package" default="init" basedir=".">
+<project name="Moodle2_Package" basedir=".">
   <import file="build.xml" />
+  <import file="vendor/covex-nn/moodle-automation/build.xml" />
   <import file="vendor/covex-nn/phpqatools/build.xml" />
 </project>
