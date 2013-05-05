@@ -3,13 +3,14 @@ language: php
 php:
    - 5.3
 
+env:
+   global:
+      - secure: "PiphyIjl2rpIezL+TyBVIkXW+kOUq67XaQS/EqhW7yMQm6+FlwOBgrS4GDn4\nuBiKA2wAIhAevFz6JTRDQ/rJEcZY9lBK2LiaJbDSzKyvHeIolbqEUJLQHm6F\n5jlnT+BzEJBpAinZVPlHxs+ewmqFh5BAuzHZkF0QXcsjNZ6o4lc="
+
 before_script:
    - wget http://getcomposer.org/composer.phar
+   - php composer.phar config github-oauth.github.com $GITHUB_OAUTH_TOKEN
    - ant -Dsystem.composer=composer.phar -Dcomposer.dev=--dev init
 
 script:
    - ant -f build-dev.xml moodle-automation-init CI-build
-
-notifications:
-   email:
-      - covex.mobile@gmail.com
