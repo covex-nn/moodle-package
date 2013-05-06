@@ -13,4 +13,4 @@ before_script:
    - ant -Dsystem.composer=composer.phar -Dcomposer.dev=--dev init
 
 script:
-   - ant -f build-dev.xml -Dmysql.root.user=root -Dmysql.root.password="" -Dmoodle.create-database=1 -Dmoodle.create-config=1 moodle-automation-init CI-build
+   - ant -f build-dev.xml -Dmysql.root.user=root -Dmysql.root.password="" -Dmoodle.create-database=1 moodle-automation-init CI-build
