@@ -19,10 +19,5 @@
         <directory>src/*/*/tests</directory>
       </exclude>
     </whitelist>
-    <blacklist>
-      <directory>www</directory>
-      <directory>tests</directory>
-      <directory>vendor</directory>
-    </blacklist>
   </filter>
 </phpunit>

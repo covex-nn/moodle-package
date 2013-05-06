@@ -3,6 +3,7 @@
   <project name="phpDox" source="src" workdir="build/phpdox">
     <collector>
       <include mask="*.php" />
+      <exclude mask="*_test.php" />
     </collector>
 
     <generator output="build">
