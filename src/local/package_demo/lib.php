@@ -50,7 +50,7 @@ class packageDemoEventsHandler
    * 
    * @return null
    */
-  public static function setInstance(packageDemoEventHandler $instance)
+  public static function setInstance(packageDemoEventsHandler $instance)
   {
     self::$_instance = $instance;
   }
@@ -70,13 +70,14 @@ class packageDemoEventsHandler
    * 
    * @param string $name      Method name
    * @param array  $arguments Arguments
+   * 
+   * @return boolean
    */
   public function __call($name, $arguments)
   {
     $method = "_eventHandler" . ucfirst($name);
     if (method_exists($this, $method)) {
-      array_shift($arguments);
-      $result = call_user_method_array($method, $this, $arguments);
+      $result = call_user_func_array(array($this, $method), $arguments);
     } else {
       $result = true;
     }
@@ -84,11 +85,11 @@ class packageDemoEventsHandler
   }
   
   /**
-   * User created user handler
+   * User created user handler. No action.
    * 
    * @param stdClass $user New user
    * 
-   * @return true
+   * @return boolean
    */
   protected function _eventHandlerUserCreated($user)
   {
