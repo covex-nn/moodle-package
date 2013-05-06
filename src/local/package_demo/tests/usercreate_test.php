@@ -7,6 +7,11 @@ require_once $CFG->dirroot . '/local/package_demo/lib.php';
 class local_package_demo_usercreate_test extends advanced_testcase
 {
   
+  /**
+   * Test instance methods
+   * 
+   * @return null
+   */
   public function testInstance()
   {
     $mock = $this->getMock(
@@ -18,6 +23,11 @@ class local_package_demo_usercreate_test extends advanced_testcase
     $this->assertEquals($mock, packageDemoEventsHandler::getInstance());
   }
   
+  /**
+   * Run Moodle event
+   * 
+   * @return null
+   */
   public function testUserCreateEvent()
   {
     $this->resetAfterTest(true);
@@ -40,6 +50,11 @@ class local_package_demo_usercreate_test extends advanced_testcase
     events_trigger("user_created", $user);
   }
   
+  /**
+   * Run defined event handler method
+   * 
+   * @return null
+   */
   public function testCall()
   {
     $user = new stdClass();
@@ -48,17 +63,32 @@ class local_package_demo_usercreate_test extends advanced_testcase
     $this->assertTrue($instance->userCreated($user));
   }
   
+  /**
+   * Run not defined event handler method
+   * 
+   * @return null
+   */
   public function testCallNotDefined()
   {
     $instance = packageDemoEventsHandler::getInstance();
     $this->assertTrue($instance->notEvent());
   }
   
+  /**
+   * Sets up the fixture
+   *
+   * @return null
+   */
   protected function setUp()
   {
     packageDemoEventsHandler::clearInstance();
   }
   
+  /**
+   * Tears down the fixture
+   * 
+   * @return null
+   */
   protected function tearDown()
   {
     packageDemoEventsHandler::clearInstance();
