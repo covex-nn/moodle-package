@@ -27,11 +27,21 @@
     "moodle-dir" : "www"
   }, 
   "scripts" : {
-    "post-install-cmd" : [
-      "JooS\\Composer\\Event\\Developer::createSymlinks"
+    "pre-install-cmd": [
+      "JooS\\Composer\\Event\\Moodle::removeSymlinks", 
+      "JooS\\Composer\\Event\\Moodle::saveConfig"
     ], 
-    "post-update-cmd" : [
-      "JooS\\Composer\\Event\\Developer::createSymlinks"
+    "post-install-cmd": [
+      "JooS\\Composer\\Event\\Moodle::restoreConfig",
+      "JooS\\Composer\\Event\\Moodle::createSymlinks"
+    ], 
+    "pre-update-cmd": [
+      "JooS\\Composer\\Event\\Moodle::removeSymlinks", 
+      "JooS\\Composer\\Event\\Moodle::saveConfig"
+    ], 
+    "post-update-cmd": [
+      "JooS\\Composer\\Event\\Moodle::restoreConfig",
+      "JooS\\Composer\\Event\\Moodle::createSymlinks"
     ]
   }, 
   "minimum-stability" : "dev", 
