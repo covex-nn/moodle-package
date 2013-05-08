@@ -1,7 +1,7 @@
 {
   "name" : "covex-nn/moodle-package", 
   "type" : "moodle-package", 
-  "description" : "Empty moodle package",
+  "description" : "Moodle Package",
   "license": "GPL-3.0+",
   "require": {
     "covex-nn/moodle-version": "~2.4"
@@ -18,7 +18,7 @@
       "local/package_demo" : "src/local/package_demo"
     }, 
     "branch-alias": {
-      "dev-master": "1.0.x-dev"
+      "dev-master": "1.x-dev"
     }
   }, 
   "config": {
