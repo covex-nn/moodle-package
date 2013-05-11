@@ -2,7 +2,7 @@
   "name" : "covex-nn/moodle-package", 
   "type" : "moodle-package", 
   "description" : "Moodle Package",
-  "license": "GPL-3.0+",
+  "license": "MIT",
   "require": {
     "covex-nn/moodle-version": "~2.4"
   }, 
