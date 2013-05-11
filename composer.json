@@ -15,7 +15,6 @@
   ], 
   "extra" : {
     "moodle-modules" : {
-      "local/package_demo" : "src/local/package_demo"
     }, 
     "branch-alias": {
       "dev-master": "1.x-dev"
