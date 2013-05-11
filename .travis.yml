@@ -6,7 +6,7 @@ php:
 
 before_script:
    - wget http://getcomposer.org/composer.phar
-   - php composer.phar config preferred-install source"
+   - php composer.phar config preferred-install source
    - ant -Dsystem.composer=composer.phar -Dcomposer.dev=--dev init
 
 script:
