@@ -2,14 +2,11 @@ language: php
 
 php:
    - 5.3
-
-env:
-   global:
-      - secure: "PiphyIjl2rpIezL+TyBVIkXW+kOUq67XaQS/EqhW7yMQm6+FlwOBgrS4GDn4\nuBiKA2wAIhAevFz6JTRDQ/rJEcZY9lBK2LiaJbDSzKyvHeIolbqEUJLQHm6F\n5jlnT+BzEJBpAinZVPlHxs+ewmqFh5BAuzHZkF0QXcsjNZ6o4lc="
+   - 5.4
 
 before_script:
    - wget http://getcomposer.org/composer.phar
-   - sh -c "if $TRAVIS_SECURE_ENV_VARS; then php composer.phar config github-oauth.github.com $GITHUB_OAUTH_TOKEN; else php composer.phar config preferred-install source; fi"
+   - php composer.phar config preferred-install source"
    - ant -Dsystem.composer=composer.phar -Dcomposer.dev=--dev init
 
 script:
