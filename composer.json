@@ -1,48 +1,52 @@
 {
-  "name" : "covex-nn/moodle-package", 
-  "type" : "moodle-package", 
-  "description" : "Moodle Package",
-  "license": "MIT",
-  "require": {
-    "covex-nn/moodle-version": "~2.4"
-  }, 
-  "require-dev" : {
-    "covex-nn/phpqatools" : "~1.0", 
-    "covex-nn/moodle-automation" : "~1.0"
-  }, 
-  "repositories" : [
-    { "type" : "composer", "url" : "https://raw.github.com/covex-nn/phpqatools/master" }
-  ], 
-  "extra" : {
-    "moodle-modules" : {
+    "name" : "covex-nn/moodle-package",
+    "type" : "moodle-package",
+    "description" : "Moodle Package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey F. Mindubaev",
+            "email": "covex.mobile@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "covex-nn/moodle-version": "2.6.*"
+    },
+    "require-dev" : {
+        "covex-nn/phpqatools" : "~1.0",
+        "covex-nn/moodle-automation" : "~1.0,>=1.0.8"
+    },
+    "extra" : {
+        "moodle-modules" : {
 
-    }, 
-    "branch-alias": {
-      "dev-master": "1.x-dev"
-    }
-  }, 
-  "config": {
-    "bin-dir" : "bin", 
-    "moodle-dir" : "www"
-  }, 
-  "scripts" : {
-    "pre-install-cmd": [
-      "JooS\\Composer\\Event\\Moodle::removeSymlinks", 
-      "JooS\\Composer\\Event\\Moodle::saveConfig"
-    ], 
-    "post-install-cmd": [
-      "JooS\\Composer\\Event\\Moodle::restoreConfig",
-      "JooS\\Composer\\Event\\Moodle::createSymlinks"
-    ], 
-    "pre-update-cmd": [
-      "JooS\\Composer\\Event\\Moodle::removeSymlinks", 
-      "JooS\\Composer\\Event\\Moodle::saveConfig"
-    ], 
-    "post-update-cmd": [
-      "JooS\\Composer\\Event\\Moodle::restoreConfig",
-      "JooS\\Composer\\Event\\Moodle::createSymlinks"
-    ]
-  }, 
-  "minimum-stability" : "dev", 
-  "prefer-stable" : true
+        },
+        "branch-alias": {
+            "dev-master": "2.6.x-dev"
+        }
+    },
+    "config" : {
+        "bin-dir" : "bin",
+        "moodle-dir" : "web"
+    },
+    "scripts" : {
+        "pre-install-cmd": [
+            "JooS\\Composer\\Event\\Moodle::removeSymlinks",
+            "JooS\\Composer\\Event\\Moodle::saveConfig"
+        ],
+        "post-install-cmd": [
+            "JooS\\Composer\\Event\\Moodle::restoreConfig",
+            "JooS\\Composer\\Event\\Moodle::createSymlinks"
+        ],
+        "pre-update-cmd": [
+            "JooS\\Composer\\Event\\Moodle::removeSymlinks",
+            "JooS\\Composer\\Event\\Moodle::saveConfig"
+        ],
+        "post-update-cmd": [
+            "JooS\\Composer\\Event\\Moodle::restoreConfig",
+            "JooS\\Composer\\Event\\Moodle::createSymlinks"
+        ]
+    },
+    "minimum-stability" : "dev",
+    "prefer-stable" : true
 }
