@@ -3,27 +3,31 @@
   "type" : "moodle-package", 
   "description" : "Moodle Package",
   "license": "MIT",
+  "authors": [
+    {
+      "name": "Andrey F. Mindubaev",
+      "email": "covex.mobile@gmail.com",
+      "role": "Developer"
+    }
+  ],
   "require": {
-    "covex-nn/moodle-version": "~2.4"
+    "covex-nn/moodle-version": "2.6.*"
   }, 
   "require-dev" : {
     "covex-nn/phpqatools" : "~1.0", 
     "covex-nn/moodle-automation" : "~1.0"
   }, 
-  "repositories" : [
-    { "type" : "composer", "url" : "https://raw.github.com/covex-nn/phpqatools/master" }
-  ], 
   "extra" : {
     "moodle-modules" : {
 
     }, 
     "branch-alias": {
-      "dev-master": "1.x-dev"
+      "dev-master": "2.6.x-dev"
     }
   }, 
-  "config": {
+  "config" : {
     "bin-dir" : "bin", 
-    "moodle-dir" : "www"
+    "moodle-dir" : "web"
   }, 
   "scripts" : {
     "pre-install-cmd": [
