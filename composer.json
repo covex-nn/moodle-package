@@ -16,7 +16,7 @@
     "require-dev" : {
         "covex-nn/phpqatools" : "~1.3",
         "apnet/coding-standard": "~1.0",
-        "covex-nn/moodle-automation" : "~1.0,>=1.0.10"
+        "covex-nn/moodle-automation" : "~1.1"
     },
     "extra" : {
         "moodle-modules" : {
