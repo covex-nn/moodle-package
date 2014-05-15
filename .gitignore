@@ -8,4 +8,5 @@ target
 vendor
 web
 .idea
+.composer
 .vagrant

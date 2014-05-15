@@ -1,5 +1,6 @@
+#!/bin/sh
 export COMPOSER_PROCESS_TIMEOUT=1200
-
+composer config --global cache-dir /vagrant/.composer/cache
 composer self-update
 cd /vagrant
 if [ ! -f build.local.properties ]; then
